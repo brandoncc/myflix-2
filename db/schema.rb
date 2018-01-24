@@ -23,11 +23,13 @@ ActiveRecord::Schema.define(version: 20180123142320) do
   end
 
   create_table "videos", force: true do |t|
-    t.string  "title"
-    t.text    "description"
-    t.string  "small_cover_url"
-    t.string  "large_cover_url"
-    t.integer "category_id"
+    t.string   "title"
+    t.text     "description"
+    t.string   "small_cover_url"
+    t.string   "large_cover_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
   end
 
 end
