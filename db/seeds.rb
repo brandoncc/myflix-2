@@ -32,3 +32,51 @@ v4 = Video.create(title: 'Family Guy',
                   small_cover_url: "family_guy.jpg",
                   large_cover_url: "family_guy_large.jpg",
                   category: c1)
+
+v1 = Video.create(title: 'Futurama',
+                  description: "Pizza boy Philip J. Fry awakens in the 31st century after 1,000 years of cryogenic preservation in this animated series. After he gets a job at an interplanetary delivery service, Fry embarks on ridiculous escapades to make sense of his predicament.",
+                  small_cover_url: "futurama.jpg",
+                  large_cover_url: "futurama_large.jpg",
+                  category: c1)
+
+v2 = Video.create(title: 'Monk',
+                  description: "Adrian Monk is a brilliant San Francisco detective, whose obsessive compulsive disorder just happens to get in the way.",
+                  small_cover_url: "monk.jpg",
+                  large_cover_url: "monk_large.jpg",
+                  category: c2)
+
+v3 = Video.create(title: 'South Park',
+                  description: "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+                  small_cover_url: "south_park.jpg",
+                  large_cover_url: "south_park_large.jpg",
+                  category: c1)
+
+v4 = Video.create(title: 'Family Guy',
+                  description: "In a wacky Rhode Island town, a dysfunctional family strive to cope with everyday life as they are thrown from one crazy scenario to another.",
+                  small_cover_url: "family_guy.jpg",
+                  large_cover_url: "family_guy_large.jpg",
+                  category: c1)
+
+v1 = Video.create(title: 'Futurama',
+                  description: "Pizza boy Philip J. Fry awakens in the 31st century after 1,000 years of cryogenic preservation in this animated series. After he gets a job at an interplanetary delivery service, Fry embarks on ridiculous escapades to make sense of his predicament.",
+                  small_cover_url: "futurama.jpg",
+                  large_cover_url: "futurama_large.jpg",
+                  category: c1)
+
+v2 = Video.create(title: 'Monk',
+                  description: "Adrian Monk is a brilliant San Francisco detective, whose obsessive compulsive disorder just happens to get in the way.",
+                  small_cover_url: "monk.jpg",
+                  large_cover_url: "monk_large.jpg",
+                  category: c2)
+
+v3 = Video.create(title: 'South Park',
+                  description: "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+                  small_cover_url: "south_park.jpg",
+                  large_cover_url: "south_park_large.jpg",
+                  category: c1)
+
+v4 = Video.create(title: 'Family Guy',
+                  description: "In a wacky Rhode Island town, a dysfunctional family strive to cope with everyday life as they are thrown from one crazy scenario to another.",
+                  small_cover_url: "family_guy.jpg",
+                  large_cover_url: "family_guy_large.jpg",
+                  category: c1)
