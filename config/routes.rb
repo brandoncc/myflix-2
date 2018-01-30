@@ -12,8 +12,9 @@ Myflix::Application.routes.draw do
 
   resources :categories, only: [:show]
   resource :queue_items, only: [:create]
-  delete 'queue_item/:id', to: 'queue_items#destroy', as: 'queue_item'
   get 'my_queue', to: 'queue_items#index'
+  post 'update_queue', to: 'queue_items#update_queue'
+  delete 'queue_item/:id', to: 'queue_items#destroy', as: 'queue_item'
 
   get 'ui(/:action)', controller: 'ui'
   get 'register', to: 'users#new'
