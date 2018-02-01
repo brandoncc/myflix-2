@@ -57,7 +57,7 @@ Video.create(title: 'South Park',
                   large_cover_url: "south_park_large.jpg",
                   category: c1)
 
-Video.create(title: 'Family Guy',
+family_guy = Video.create(title: 'Family Guy',
                   description: "In a wacky Rhode Island town, a dysfunctional family strive to cope with everyday life as they are thrown from one crazy scenario to another.",
                   small_cover_url: "family_guy.jpg",
                   large_cover_url: "family_guy_large.jpg",
@@ -72,4 +72,7 @@ futurama = Video.create(title: 'Futurama',
 alex = User.create(full_name: "Alex Henegar", password: "password", email: "alex@example.com")
 
 Review.create(user: alex, video: futurama, rating: 5, content: "This show is the best!")
-Review.create(user: alex, video: futurama, rating: 2, content: "This show could use some work.")
+Review.create(user: alex, video: family_guy, rating: 2, content: "This show could use some work.")
+
+QueueItem.create(user: alex, video: futurama, position: 1)
+QueueItem.create(user: alex, video: family_guy, position: 2)
