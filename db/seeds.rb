@@ -70,9 +70,18 @@ futurama = Video.create(title: 'Futurama',
                   category: c1)
 
 alex = User.create(full_name: "Alex Henegar", password: "password", email: "alex@example.com")
+bob = User.create(full_name: "Bob Henegar", password: "password", email: "bob@example.com")
+alice = User.create(full_name: "Alice Henegar", password: "password", email: "alice@example.com")
+charlie = User.create(full_name: "Charlie Henegar", password: "password", email: "charlie@example.com")
 
-Review.create(user: alex, video: futurama, rating: 5, content: "This show is the best!")
-Review.create(user: alex, video: family_guy, rating: 2, content: "This show could use some work.")
+Relationship.create(leader: bob, follower: alex)
+
+Fabricate.times(20, :review) do
+  user { User.all.sample }
+  video { Video.all.sample }
+end
+# Review.create(user: alex, video: futurama, rating: 5, content: "This show is the best!")
+# Review.create(user: alex, video: family_guy, rating: 2, content: "This show could use some work.")
 
 QueueItem.create(user: alex, video: futurama, position: 1)
 QueueItem.create(user: alex, video: family_guy, position: 2)
