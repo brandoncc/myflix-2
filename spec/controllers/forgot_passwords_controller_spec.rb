@@ -21,6 +21,12 @@ describe ForgotPasswordsController do
         expect(response).to redirect_to forgot_password_confirmation_path
       end
 
+      it "generates a random token for user" do
+        alice = Fabricate(:user, email: "joe@example.com")
+        post :create, email: "joe@example.com"
+        expect(alice.reload.token).to be_present
+      end
+
       it "sends out an email to the email address" do
         Fabricate(:user, email: "joe@example.com")
         post :create, email: "joe@example.com"
