@@ -10,7 +10,6 @@ class PasswordResetsController < ApplicationController
 
   def create
     user = User.where(token: params[:token]).first
-    binding.pry
     if user
       user.password = params[:password]
       user.token = nil
