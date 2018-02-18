@@ -11,6 +11,8 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'pg'
+gem 'sidekiq', '4.0.0'
+gem 'unicorn'
 
 group :development do
   gem 'thin'
