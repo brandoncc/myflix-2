@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'sidekiq', '4.0.0'
 gem 'unicorn'
+gem 'sentry-raven'
 
 group :development do
   gem 'thin'
