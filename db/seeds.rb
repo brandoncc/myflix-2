@@ -69,7 +69,7 @@ futurama = Video.create(title: 'Futurama',
                   large_cover_url: "futurama_large.jpg",
                   category: c1)
 
-alex = User.create(full_name: "Alex Henegar", password: "password", email: "alex@example.com")
+alex = User.create(full_name: "Alex Henegar", password: "password", email: "alex@example.com", admin: true)
 bob = User.create(full_name: "Bob Henegar", password: "password", email: "bob@example.com")
 alice = User.create(full_name: "Alice Henegar", password: "password", email: "alice@example.com")
 charlie = User.create(full_name: "Charlie Henegar", password: "password", email: "charlie@example.com")
