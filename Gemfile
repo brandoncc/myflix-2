@@ -14,6 +14,9 @@ gem 'pg'
 gem 'sidekiq', '4.0.0'
 gem 'unicorn'
 gem 'sentry-raven'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'carrierwave-aws'
 
 group :development do
   gem 'thin'
