@@ -12,7 +12,6 @@ class UsersController < ApplicationController
 
       Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
-
       charge = StripeWrapper::Charge.create(
         :amount => 999,
         :source => params[:stripeToken],

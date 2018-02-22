@@ -2,19 +2,25 @@ $(function() {
   var elements = stripe.elements();
 
   // Create an instance of the card Element
-  var card = elements.create('card');
+  var cardNumber = elements.create('cardNumber');
+  var cardExpiry = elements.create('cardExpiry');
+  var cardCvc = elements.create('cardCvc');
 
   // Add an instance of the card Element into the `card-element` <div>
-  card.mount('#card-element');
+  cardNumber.mount('#card-number');
+  cardExpiry.mount('#card-expiry');
+  cardCvc.mount('#card-cvc');
 
   // Listen for errors
-  card.addEventListener('change', function(event) {
-    var displayError = document.getElementById('card-errors');
-    if (event.error) {
-      displayError.textContent = event.error.message;
-    } else {
-      displayError.textContent = '';
-    }
+  [cardNumber, cardExpiry, cardCvc].forEach(function(element, idx) {
+    element.addEventListener('change', function(event) {
+      var displayError = document.getElementById('card-errors');
+      if (event.error) {
+        displayError.textContent = event.error.message;
+      } else {
+        displayError.textContent = '';
+      }
+    });
   });
 
   // Look at the form element with the id and intercepts the submit event
@@ -31,7 +37,7 @@ $(function() {
       name: $('#user_email').val(),
     };
 
-    stripe.createToken(card, cardData).then(stripeResponseHandler);
+    stripe.createToken(cardNumber, cardData).then(stripeResponseHandler);
 
     return false;
   });
@@ -51,7 +57,6 @@ $(function() {
 
   var stripeTokenHandler = function(token) {
     var $form = $('#payment-form');
-    // console.log($form)
     // if no errors, take the response.id as the token and insert
     // a hidden field into the form that will then be submitted.
     var $hiddenStripeToken = $('<input>');
