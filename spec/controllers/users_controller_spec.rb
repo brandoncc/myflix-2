@@ -14,14 +14,20 @@ describe UsersController do
       let(:charge) { double(:charge, successful?: true) }
       before do
         StripeWrapper::Charge.should_receive(:create).and_return(charge)
-        post :create, user: Fabricate.attributes_for(:user)
       end
 
       it "creates the user" do
+        post :create, user: Fabricate.attributes_for(:user)
         expect(User.count).to eq(1)
       end
 
+      it "sets the flash success message" do
+        post :create, user: Fabricate.attributes_for(:user)
+        expect(flash[:success]).to be_present
+      end
+
       it "redirects to the sign in page" do
+        post :create, user: Fabricate.attributes_for(:user)
         expect(response).to redirect_to sign_in_path
       end
 

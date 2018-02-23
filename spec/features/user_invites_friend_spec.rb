@@ -32,15 +32,7 @@ feature 'user invites friend' do
 
     fill_in "Password", with: "password"
     fill_in "Full Name", with: "John Doe"
-    within_frame("__privateStripeFrame3") do
-      find_field('cardnumber').send_keys("4242424242424242")
-    end
-    within_frame("__privateStripeFrame4") do
-      find_field('exp-date').send_keys("1121")
-    end
-    within_frame("__privateStripeFrame5") do
-      find_field('cvc').send_keys("123")
-    end
+    fill_in_valid_card
     click_button "Sign Up"
     expect(page).to have_content("Sign in")
   end
@@ -61,9 +53,5 @@ feature 'user invites friend' do
     sign_in(inviter)
     click_link "People"
     expect(page).to have_content "John Doe"
-  end
-
-  def fill_stripe_elements()
-
   end
 end
