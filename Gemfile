@@ -17,6 +17,8 @@ gem 'sentry-raven'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'carrierwave-aws'
+gem 'stripe'
+gem 'figaro'
 
 group :development do
   gem 'thin'
@@ -36,10 +38,12 @@ end
 group :test do
   gem 'database_cleaner', '1.4.1'
   gem 'shoulda-matchers', '2.7.0'
-  gem 'vcr', '2.9.3'
+  gem 'vcr'
   gem 'capybara'
   gem 'capybara-email'
   gem 'launchy'
+  gem 'webmock'
+  gem 'selenium-webdriver'
 end
 
 group :production, :staging do
