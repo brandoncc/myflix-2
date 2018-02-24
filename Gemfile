@@ -19,6 +19,7 @@ gem 'mini_magick'
 gem 'carrierwave-aws'
 gem 'stripe'
 gem 'figaro'
+gem 'rspec_junit_formatter'
 
 group :development do
   gem 'thin'
